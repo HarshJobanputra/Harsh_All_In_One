@@ -58,16 +58,19 @@ Both Django REST Framework and FastAPI are world-class frameworks, but they serv
 
 ## 📚 Master Engineering Modules
 
-1. **[Architecture & Design](01-architecture/clean-architecture-service-layer.md)**: Clean Architecture, Service Layer vs Fat Models, SOLID, and Modular Monoliths.
-2. **[Database Engineering](02-database-engineering/schema-design-indexing.md)**: Indexing, Pessimistic vs Optimistic locking, N+1 query elimination, Soft Deletes, and Connection Pooling.
-3. **[API Engineering](03-api-engineering/rest-standards-response-envelope.md)**: Standardized envelopes, Keyset pagination, Idempotent requests, and S3 Presigned URLs.
-4. **[Authentication & Security](04-auth-and-security/jwt-rotation-and-revocation.md)**: JWT token rotation, RBAC/ABAC, PostgreSQL Row-Level Security, and Rate Limiting.
-5. **[Error Handling & Resilience](05-error-handling-resilience/rfc-7807-error-standards.md)**: RFC 7807 Problem Details, Circuit Breakers, and Exponential Retries.
-6. **[Performance & Caching](06-caching-performance/redis-caching-patterns-stampede.md)**: Cache-Aside, Mutex Stampede Locks, and Async Event Loop Profiling.
-7. **[Background Tasks & Queues](07-background-jobs-queues/celery-canvas-and-idempotency.md)**: Celery Late Ack, Chords, and Transactional Outbox Pattern.
-8. **[Observability & Monitoring](08-observability-monitoring/structured-logging-correlation-id.md)**: Correlation IDs, Structured JSON Logs, and OpenTelemetry Spans.
-9. **[DevOps & Deployment](09-devops-deployment/docker-production-builds.md)**: Multi-Stage Dockerfiles, Gunicorn/Uvicorn Worker Topologies, and CI/CD.
-10. **[AI & RAG Backend](10-ai-rag-backend/streaming-sse-and-llm-apis.md)**: Server-Sent Events (SSE), pgvector Semantic Search, and Prompt Guardrails.
+1. **[Architecture & Design](01-architecture/clean-architecture-service-layer.md)**: Clean Architecture, Service-Selector Pattern, SOLID, Modular Monoliths, and Domain-Driven Design (DDD).
+2. **[Frameworks & Advanced Python](02-frameworks-python/advanced-python-concurrency.md)**: Decorators, Generators, Context Managers, Django vs FastAPI internals, and Pydantic Settings.
+3. **[Database Engineering](02-database-engineering/schema-design-indexing.md)**: Indexing, Pessimistic Locking, ACID Isolation Levels, Zero-Downtime Migrations, Read Replicas, and PgBouncer.
+4. **[API Engineering](03-api-engineering/rest-standards-response-envelope.md)**: Standardized envelopes, GraphQL with Strawberry, Keyset pagination, Dynamic Filtering, Bulk APIs, and Idempotency.
+5. **[Authentication & Security](04-auth-and-security/jwt-rotation-and-revocation.md)**: JWT token rotation, OAuth 2.0 / OIDC with PKCE, Cookie flags, TOTP 2FA, Argon2id, API Keys, and PostgreSQL RLS.
+6. **[Error Handling & Resilience](05-error-handling-resilience/rfc-7807-error-standards.md)**: RFC 7807 Problem Details, Circuit Breakers, and Exponential Retries with Jitter.
+7. **[Performance & Caching](06-caching-performance/redis-caching-patterns-stampede.md)**: Redis Cache-Aside, Mutex Stampede Locks, and Async Event Loop Profiling.
+8. **[Background Tasks & Queues](07-background-jobs-queues/celery-canvas-and-idempotency.md)**: Celery Late Ack, Chords, RabbitMQ vs Kafka, and Transactional Outbox Pattern.
+9. **[Observability & SRE Reliability](08-observability-monitoring/structured-logging-correlation-id.md)**: Correlation IDs, OpenTelemetry Spans, Sentry error tracking, Liveness/Readiness probes, and Runbooks.
+10. **[DevOps & Cloud Infrastructure](09-devops-deployment/docker-production-builds.md)**: Multi-Stage Docker, Nginx reverse proxying, Kubernetes Deployments, Zero-Downtime releases, and Terraform IaC.
+11. **[Testing & Quality Assurance](11-testing-and-qa/pytest-masterclass-fixtures.md)**: Pytest fixtures, FactoryBoy data generation, HTTP mocking (`respx`), and k6 load testing.
+12. **[AI & RAG Backend Engineering](10-ai-rag-backend/streaming-sse-and-llm-apis.md)**: Server-Sent Events (SSE), pgvector Hybrid Search, Prompt Guardrails, Chunking, and Tool Calling.
+13. **[Code Maintenance & ADRs](12-code-maintenance/adrs-and-code-reviews.md)**: Architecture Decision Records (ADRs), Pull Request review checklists, and Technical Debt.
 
 ---
 

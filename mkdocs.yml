@@ -66,43 +66,78 @@ nav:
   - "Overview":
       - "Welcome & Master Roadmap": "index.md"
   - "1. Architecture & Design":
-      - "Clean Architecture & Service Layer": "01-architecture/clean-architecture-service-layer.md"
-      - "Monolith vs Microservices": "01-architecture/monolith-vs-microservices.md"
-      - "SOLID Principles & Design Patterns": "01-architecture/solid-and-design-patterns.md"
-  - "2. Database Engineering":
-      - "Schema Design & Indexing": "02-database-engineering/schema-design-indexing.md"
-      - "Concurrency & Locking (Pessimistic vs Optimistic)": "02-database-engineering/concurrency-optimistic-pessimistic-locking.md"
-      - "N+1 Query Elimination": "02-database-engineering/n-plus-one-query-optimization.md"
-      - "Soft Deletes & Audit Logging": "02-database-engineering/soft-delete-and-auditing.md"
-      - "Connection Pooling & PgBouncer": "02-database-engineering/connection-pooling-pgbouncer.md"
-  - "3. API Engineering":
-      - "REST Standards & Response Envelope": "03-api-engineering/rest-standards-response-envelope.md"
-      - "Pagination: Offset vs Keyset/Cursor": "03-api-engineering/pagination-offset-vs-cursor.md"
-      - "Idempotency & Safe Retries": "03-api-engineering/idempotency-and-webhooks.md"
-      - "Secure File Uploads & S3": "03-api-engineering/file-uploads-presigned-urls.md"
-  - "4. Auth & Security":
-      - "JWT Rotation & Family Revocation": "04-auth-and-security/jwt-rotation-and-revocation.md"
-      - "RBAC & ABAC Access Control": "04-auth-and-security/rbac-abac-authorization.md"
-      - "Multi-Tenancy Isolation": "04-auth-and-security/multi-tenancy-isolation.md"
-      - "Rate Limiting & OWASP Defenses": "04-auth-and-security/owasp-top-10-and-rate-limiting.md"
-  - "5. Error Handling & Resilience":
-      - "RFC 7807 Error Standards": "05-error-handling-resilience/rfc-7807-error-standards.md"
-      - "Circuit Breakers & Retries": "05-error-handling-resilience/circuit-breakers-retries-backoff.md"
-  - "6. Performance & Caching":
-      - "Redis Caching & Stampede Prevention": "06-caching-performance/redis-caching-patterns-stampede.md"
-      - "Async Event Loop & Concurrency": "06-caching-performance/async-event-loop-and-profiling.md"
-  - "7. Background Tasks & Queues":
-      - "Celery Orchestration & Late Ack": "07-background-jobs-queues/celery-canvas-and-idempotency.md"
-      - "Transactional Outbox Pattern": "07-background-jobs-queues/transactional-outbox-pattern.md"
-  - "8. Observability & Monitoring":
-      - "Structured Logging & Correlation IDs": "08-observability-monitoring/structured-logging-correlation-id.md"
-      - "OpenTelemetry & Prometheus Metrics": "08-observability-monitoring/opentelemetry-tracing-metrics.md"
-  - "9. DevOps & Deployment":
-      - "Production Multi-Stage Docker": "09-devops-deployment/docker-production-builds.md"
-      - "Gunicorn & Uvicorn Worker Topologies": "09-devops-deployment/uvicorn-gunicorn-workers.md"
-      - "CI/CD Workflows": "09-devops-deployment/ci-cd-github-actions.md"
-  - "10. AI & RAG Backend":
-      - "Streaming SSE & LLM APIs": "10-ai-rag-backend/streaming-sse-and-llm-apis.md"
-      - "Vector Databases & Hybrid Search": "10-ai-rag-backend/vector-databases-and-hybrid-search.md"
-      - "Prompt Guardrails & Semantic Caching": "10-ai-rag-backend/prompt-guardrails-and-caching.md"
-
+      - "I - Clean Architecture & Service Layer": "01-architecture/clean-architecture-service-layer.md"
+      - "II - Monolith vs Microservices": "01-architecture/monolith-vs-microservices.md"
+      - "III - SOLID Principles & Design Patterns": "01-architecture/solid-and-design-patterns.md"
+      - "IV - Domain-Driven Design & EDA": "01-architecture/domain-driven-design-and-eda.md"
+  - "2. Frameworks & Advanced Python":
+      - "I - Advanced Python & Concurrency": "02-frameworks-python/advanced-python-concurrency.md"
+      - "II - Django vs FastAPI Internals": "02-frameworks-python/django-vs-fastapi-internals.md"
+      - "III - Dependency & Config Management": "02-frameworks-python/dependency-and-config-management.md"
+  - "3. Database Engineering":
+      - "I - Schema Design & Indexing": "02-database-engineering/schema-design-indexing.md"
+      - "II - Concurrency & Locking (Pessimistic vs Optimistic)": "02-database-engineering/concurrency-optimistic-pessimistic-locking.md"
+      - "III - N+1 Query Elimination": "02-database-engineering/n-plus-one-query-optimization.md"
+      - "IV - ACID Transactions & Isolation Levels": "02-database-engineering/acid-transactions-and-isolation-levels.md"
+      - "V - Soft Deletes & Audit Logging": "02-database-engineering/soft-delete-and-auditing.md"
+      - "VI - Zero-Downtime Migrations": "02-database-engineering/database-migrations-zero-downtime.md"
+      - "VII - Connection Pooling & PgBouncer": "02-database-engineering/connection-pooling-pgbouncer.md"
+      - "VIII - Replicas, Partitioning & Sharding": "02-database-engineering/database-partitioning-sharding-replicas.md"
+  - "4. API Engineering":
+      - "I - REST Standards & Response Envelope": "03-api-engineering/rest-standards-response-envelope.md"
+      - "II - GraphQL APIs with Strawberry": "03-api-engineering/graphql-apis-strawberry.md"
+      - "III - API Versioning & Deprecation": "03-api-engineering/api-versioning-and-deprecation.md"
+      - "IV - Pagination: Offset vs Keyset/Cursor": "03-api-engineering/pagination-offset-vs-cursor.md"
+      - "V - Dynamic Filtering, Sorting & Search": "03-api-engineering/filtering-sorting-search.md"
+      - "VI - Bulk Operations & Batching": "03-api-engineering/bulk-apis-and-batching.md"
+      - "VII - Idempotency & Safe Retries": "03-api-engineering/idempotency-and-webhooks.md"
+      - "VIII - Secure File Uploads & S3": "03-api-engineering/file-uploads-presigned-urls.md"
+  - "5. Auth & Security":
+      - "I - JWT Rotation & Family Revocation": "04-auth-and-security/jwt-rotation-and-revocation.md"
+      - "II - OAuth 2.0 & OIDC with PKCE": "04-auth-and-security/oauth2-oidc-social-auth.md"
+      - "III - Cookie Security & Sessions": "04-auth-and-security/session-cookies-vs-tokens.md"
+      - "IV - MFA (TOTP 2FA) & Password Hashing": "04-auth-and-security/mfa-totp-security.md"
+      - "V - API Keys & Service Authentication": "04-auth-and-security/api-keys-and-service-auth.md"
+      - "VI - RBAC & ABAC Access Control": "04-auth-and-security/rbac-abac-authorization.md"
+      - "VII - Multi-Tenancy Isolation": "04-auth-and-security/multi-tenancy-isolation.md"
+      - "VIII - Rate Limiting & OWASP Defenses": "04-auth-and-security/owasp-top-10-and-rate-limiting.md"
+      - "IX - CORS, CSP & Secrets Management": "04-auth-and-security/cors-csp-and-secrets.md"
+  - "6. Error Handling & Resilience":
+      - "I - RFC 7807 Error Standards": "05-error-handling-resilience/rfc-7807-error-standards.md"
+      - "II - Circuit Breakers & Retries": "05-error-handling-resilience/circuit-breakers-retries-backoff.md"
+  - "7. Performance & Caching":
+      - "I - Redis Caching & Stampede Prevention": "06-caching-performance/redis-caching-patterns-stampede.md"
+      - "II - Async Event Loop & Concurrency": "06-caching-performance/async-event-loop-and-profiling.md"
+  - "8. Background Tasks & Message Queues":
+      - "I - Celery Orchestration & Late Ack": "07-background-jobs-queues/celery-canvas-and-idempotency.md"
+      - "II - Transactional Outbox Pattern": "07-background-jobs-queues/transactional-outbox-pattern.md"
+      - "III - Message Brokers: RabbitMQ vs Kafka": "07-background-jobs-queues/message-brokers-rabbitmq-kafka.md"
+      - "IV - Distributed Locks & Saga Pattern": "07-background-jobs-queues/distributed-locks-and-saga-pattern.md"
+  - "9. Observability & SRE Reliability":
+      - "I - Structured Logging & Correlation IDs": "08-observability-monitoring/structured-logging-correlation-id.md"
+      - "II - OpenTelemetry & Prometheus Metrics": "08-observability-monitoring/opentelemetry-tracing-metrics.md"
+      - "III - Sentry Error Tracking": "08-observability-monitoring/sentry-error-tracking.md"
+      - "IV - Health Probes (Liveness & Readiness)": "08-observability-monitoring/health-probes-liveness-readiness.md"
+      - "V - SRE Reliability & Runbooks": "08-observability-monitoring/sre-reliability-and-runbooks.md"
+  - "10. DevOps & Cloud Infrastructure":
+      - "I - Production Multi-Stage Docker": "09-devops-deployment/docker-production-builds.md"
+      - "II - Gunicorn & Uvicorn Topologies": "09-devops-deployment/uvicorn-gunicorn-workers.md"
+      - "III - Nginx Reverse Proxy Configuration": "09-devops-deployment/nginx-reverse-proxy-configuration.md"
+      - "IV - CI/CD Workflows": "09-devops-deployment/ci-cd-github-actions.md"
+      - "V - Kubernetes Deployments & HPA": "09-devops-deployment/kubernetes-backend-deployment.md"
+      - "VI - Zero-Downtime Deployments": "09-devops-deployment/zero-downtime-deployments.md"
+      - "VII - AWS Cloud Architecture": "09-devops-deployment/aws-cloud-architecture.md"
+      - "VIII - Infrastructure as Code (Terraform)": "09-devops-deployment/infrastructure-as-code-terraform.md"
+  - "11. Testing & Quality Assurance":
+      - "I - Pytest Masterclass & Fixtures": "11-testing-and-qa/pytest-masterclass-fixtures.md"
+      - "II - Database Testing & FactoryBoy": "11-testing-and-qa/database-testing-and-factories.md"
+      - "III - Mocking External Services": "11-testing-and-qa/mocking-external-services.md"
+      - "IV - Load Testing with k6 & Locust": "11-testing-and-qa/load-and-performance-testing-k6.md"
+  - "12. AI & RAG Backend Engineering":
+      - "I - Streaming SSE & LLM APIs": "10-ai-rag-backend/streaming-sse-and-llm-apis.md"
+      - "II - Vector Databases & Hybrid Search": "10-ai-rag-backend/vector-databases-and-hybrid-search.md"
+      - "III - Prompt Guardrails & Semantic Caching": "10-ai-rag-backend/prompt-guardrails-and-caching.md"
+      - "IV - Document Chunking & RAG Evaluation": "10-ai-rag-backend/document-chunking-and-eval.md"
+      - "V - AI Function Calling & Tools": "10-ai-rag-backend/ai-function-calling-tools.md"
+  - "13. Code Maintenance & Architecture Records":
+      - "I - ADRs & Code Review Standards": "12-code-maintenance/adrs-and-code-reviews.md"
