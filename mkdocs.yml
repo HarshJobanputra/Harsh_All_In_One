@@ -1,0 +1,108 @@
+site_name: All In One Backend Engineering | Django DRF & FastAPI
+site_description: Enterprise-grade All In One Backend Engineering Documentation covering DRF and FastAPI from Basic to Advanced.
+site_author: Backend Engineer
+site_url: http://localhost:8000
+
+repo_name: backend-all-in-one-guide
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+
+copyright: "Copyright &copy; 2026 All In One Backend Engineering | Django DRF & FastAPI"
+extra:
+  generator: false
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.mark
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+nav:
+  - "Overview":
+      - "Welcome & Master Roadmap": "index.md"
+  - "1. Architecture & Design":
+      - "Clean Architecture & Service Layer": "01-architecture/clean-architecture-service-layer.md"
+      - "Monolith vs Microservices": "01-architecture/monolith-vs-microservices.md"
+      - "SOLID Principles & Design Patterns": "01-architecture/solid-and-design-patterns.md"
+  - "2. Database Engineering":
+      - "Schema Design & Indexing": "02-database-engineering/schema-design-indexing.md"
+      - "Concurrency & Locking (Pessimistic vs Optimistic)": "02-database-engineering/concurrency-optimistic-pessimistic-locking.md"
+      - "N+1 Query Elimination": "02-database-engineering/n-plus-one-query-optimization.md"
+      - "Soft Deletes & Audit Logging": "02-database-engineering/soft-delete-and-auditing.md"
+      - "Connection Pooling & PgBouncer": "02-database-engineering/connection-pooling-pgbouncer.md"
+  - "3. API Engineering":
+      - "REST Standards & Response Envelope": "03-api-engineering/rest-standards-response-envelope.md"
+      - "Pagination: Offset vs Keyset/Cursor": "03-api-engineering/pagination-offset-vs-cursor.md"
+      - "Idempotency & Safe Retries": "03-api-engineering/idempotency-and-webhooks.md"
+      - "Secure File Uploads & S3": "03-api-engineering/file-uploads-presigned-urls.md"
+  - "4. Auth & Security":
+      - "JWT Rotation & Family Revocation": "04-auth-and-security/jwt-rotation-and-revocation.md"
+      - "RBAC & ABAC Access Control": "04-auth-and-security/rbac-abac-authorization.md"
+      - "Multi-Tenancy Isolation": "04-auth-and-security/multi-tenancy-isolation.md"
+      - "Rate Limiting & OWASP Defenses": "04-auth-and-security/owasp-top-10-and-rate-limiting.md"
+  - "5. Error Handling & Resilience":
+      - "RFC 7807 Error Standards": "05-error-handling-resilience/rfc-7807-error-standards.md"
+      - "Circuit Breakers & Retries": "05-error-handling-resilience/circuit-breakers-retries-backoff.md"
+  - "6. Performance & Caching":
+      - "Redis Caching & Stampede Prevention": "06-caching-performance/redis-caching-patterns-stampede.md"
+      - "Async Event Loop & Concurrency": "06-caching-performance/async-event-loop-and-profiling.md"
+  - "7. Background Tasks & Queues":
+      - "Celery Orchestration & Late Ack": "07-background-jobs-queues/celery-canvas-and-idempotency.md"
+      - "Transactional Outbox Pattern": "07-background-jobs-queues/transactional-outbox-pattern.md"
+  - "8. Observability & Monitoring":
+      - "Structured Logging & Correlation IDs": "08-observability-monitoring/structured-logging-correlation-id.md"
+      - "OpenTelemetry & Prometheus Metrics": "08-observability-monitoring/opentelemetry-tracing-metrics.md"
+  - "9. DevOps & Deployment":
+      - "Production Multi-Stage Docker": "09-devops-deployment/docker-production-builds.md"
+      - "Gunicorn & Uvicorn Worker Topologies": "09-devops-deployment/uvicorn-gunicorn-workers.md"
+      - "CI/CD Workflows": "09-devops-deployment/ci-cd-github-actions.md"
+  - "10. AI & RAG Backend":
+      - "Streaming SSE & LLM APIs": "10-ai-rag-backend/streaming-sse-and-llm-apis.md"
+      - "Vector Databases & Hybrid Search": "10-ai-rag-backend/vector-databases-and-hybrid-search.md"
+      - "Prompt Guardrails & Semantic Caching": "10-ai-rag-backend/prompt-guardrails-and-caching.md"
+

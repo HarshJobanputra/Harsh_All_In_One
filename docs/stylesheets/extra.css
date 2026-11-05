@@ -1,0 +1,239 @@
+/* ========================================================
+   Full-Width Fluid Layout (Eliminate 60% constraint & Margins)
+   ======================================================== */
+
+/* Expand main grid container to 100% full width */
+.md-grid {
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+/* Header full width */
+.md-header__inner {
+  max-width: 100% !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+/* Main container and content full width */
+.md-main__inner {
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+.md-content {
+  max-width: 100% !important;
+}
+
+.md-content__inner {
+  max-width: 100% !important;
+  margin-left: 1.25rem !important;
+  margin-right: 1.25rem !important;
+}
+
+.md-sidebar__inner{
+  padding: 0.5rem !important;
+}
+
+.md-nav__list{
+  padding-top: 0.5rem;
+}
+
+/* Comfortable sidebar dimensions on widescreen */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    width: 16.5rem !important;
+  }
+  .md-sidebar--secondary {
+    width: 14.5rem !important;
+  }
+}
+
+/* Expand code blocks, tables, and tabs to use full container */
+.md-typeset table:not([class]) {
+  width: 100% !important;
+  display: table !important;
+}
+
+.tabbed-set {
+  width: 100% !important;
+}
+
+/* ========================================================
+   Custom Scrollbar & Navigation Enhancements
+   ======================================================== */
+
+/* Left Sidebar Navigation Scrollbar */
+.md-sidebar__inner,
+.md-sidebar--primary .md-sidebar__scrollwrap {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(99, 102, 241, 0.4) transparent;
+}
+
+.md-sidebar__inner::-webkit-scrollbar,
+.md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.md-sidebar__inner::-webkit-scrollbar-track,
+.md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.md-sidebar__inner::-webkit-scrollbar-thumb,
+.md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+  background-color: rgba(99, 102, 241, 0.35);
+  border-radius: 4px;
+}
+
+.md-sidebar__inner::-webkit-scrollbar-thumb:hover,
+.md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(99, 102, 241, 0.75);
+}
+
+/* ========================================================
+   Refined, Compact Typography: Collapsible Modules
+   ======================================================== */
+
+/* 1. PARENT MODULE HEADERS (Collapsible Accordion Headers) */
+.md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link,
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link[href="."] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  cursor: pointer !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin-top: 8px !important;
+  margin-bottom: 3px !important;
+  padding: 5px 9px !important;
+  border-radius: 4px !important;
+  border-left: 3px solid var(--md-primary-fg-color) !important;
+  line-height: 1.35 !important;
+  transition: all 0.15s ease-in-out !important;
+}
+
+/* Chevron expand/collapse arrow polish */
+.md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link .md-nav__icon {
+  margin-left: auto;
+  opacity: 0.75;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Dark theme styling for Module Headers */
+[data-md-color-scheme="slate"] .md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link,
+[data-md-color-scheme="slate"] .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link[href="."] {
+  background: rgba(99, 102, 241, 0.10) !important;
+  color: #c7d2fe !important;
+  border-left-color: #818cf8 !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link:hover {
+  background: rgba(99, 102, 241, 0.20) !important;
+  color: #ffffff !important;
+}
+
+/* Light theme styling for Module Headers */
+[data-md-color-scheme="default"] .md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link,
+[data-md-color-scheme="default"] .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link[href="."] {
+  background: #f1f5f9 !important;
+  color: #334155 !important;
+  border-left-color: #4f46e5 !important;
+}
+
+[data-md-color-scheme="default"] .md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link:hover {
+  background: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+/* 2. SUBMODULE CONTAINER (Tree Line & Indentation) */
+.md-nav--primary .md-nav[data-md-level="1"] {
+  margin-left: 10px !important;
+  padding-left: 8px !important;
+  border-left: 1.5px solid rgba(148, 163, 184, 0.22) !important;
+  margin-top: 3px !important;
+  margin-bottom: 8px !important;
+}
+
+/* 3. SUBMODULE TOPIC LINKS (Single Target Only, Never Duplicate) */
+.md-nav--primary .md-nav[data-md-level="1"] .md-nav__item > a.md-nav__link {
+  font-size: 0.73rem !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+  padding: 3.5px 8px !important;
+  margin: 1.5px 0 !important;
+  border-radius: 4px !important;
+  color: var(--md-default-fg-color--light) !important;
+  transition: all 0.12s ease-in-out !important;
+  display: block !important;
+}
+
+/* Hover state for submodules with subtle nudge animation */
+.md-nav--primary .md-nav[data-md-level="1"] .md-nav__item > a.md-nav__link:hover {
+  background: rgba(99, 102, 241, 0.08) !important;
+  color: var(--md-primary-fg-color) !important;
+  transform: translateX(3px) !important;
+}
+
+/* Active selected submodule */
+.md-nav--primary .md-nav[data-md-level="1"] .md-nav__item > a.md-nav__link--active {
+  background: rgba(99, 102, 241, 0.15) !important;
+  color: var(--md-primary-fg-color) !important;
+  font-weight: 600 !important;
+  border-left: 2.5px solid var(--md-primary-fg-color) !important;
+}
+
+/* ELIMINATE DUPLICATE SUBMODULE LABELS (Hide TOC Toggle Label in Primary Sidebar) */
+.md-nav--primary .md-nav__link[for="__toc"],
+.md-nav--primary .md-nav[data-md-level="1"] label.md-nav__link {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* ========================================================
+   Footer Copyright Styling (Clear & Visible)
+   ======================================================== */
+.md-footer {
+  margin-top: 2rem !important;
+}
+
+.md-footer-meta {
+  padding: 1.2rem 0 !important;
+}
+
+.md-copyright {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  font-size: 0.78rem !important;
+  line-height: 1.5 !important;
+  color: var(--md-default-fg-color--light) !important;
+}
+
+.md-copyright__highlight {
+  display: inline-block !important;
+  color: var(--md-default-fg-color) !important;
+  font-weight: 500 !important;
+}
+
+/* Hide only third-party attribution links */
+.md-footer-meta .md-copyright a[href*="squidfunk.github.io"],
+.md-footer-meta .md-copyright a[href*="mkdocs.org"] {
+  display: none !important;
+}
+
+/* Code Tabs & General Polish */
+.tabbed-set {
+  border-radius: 6px !important;
+  overflow: hidden !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06) !important;
+}
