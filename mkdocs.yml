@@ -1,7 +1,7 @@
 site_name: All In One Backend Engineering | Django DRF & FastAPI
 site_description: Enterprise-grade All In One Backend Engineering Documentation covering DRF and FastAPI from Basic to Advanced.
 site_author: Backend Engineer
-site_url: http://localhost:8000
+site_url: https://harshjobanputra.github.io/Harsh_All_In_One/
 
 repo_name: backend-all-in-one-guide
 theme:
